@@ -7,8 +7,8 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
-#from django.forms import CharField
 
+# from django.forms import CharField.
 # Create your models here.
 
 class CourseManager(models.Manager):
@@ -29,10 +29,11 @@ class Course(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, blank=True, null=True)
     objects = CourseManager() # agr o .objects será o personalizado
 
+
     def __str__(self) -> str:
         return self.name
 
-  
+
     def get_absolute_url(self):
         return reverse('details', args=[str(self.id)]) #id referente ao id passado na url details
 
@@ -42,7 +43,7 @@ class Course(models.Model):
         verbose_name_plural = 'Cursos'
         ordering = ['name']
 
+                 
     
-  
 
     

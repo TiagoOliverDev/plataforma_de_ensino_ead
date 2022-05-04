@@ -34,7 +34,43 @@
                 {% else %}
                 <img src="{% static 'img/programação.jpg' %}" alt="" />
                 {% endif %}
+                <h4>Dúvidas?</h4>
+                <p>
+                    <a href="#contato" title="" class="pure-button">Fale conosco</a>
+                </p>
             </div>
+        </div>
+    </div>
+
+    <div class="pure-g-r content-ribbon" id="contato">
+        <div class="pure-u-1">
+            <h3>Tire sua dúvida sobre o curso</h3>
+            <form class="pure-form pure-form-aligned">
+                <fieldset>
+                    <div class="pure-control-group" >
+                        <label for="name" >Nome</label>
+                        <input id="name" type="text" />
+                        <ul class="errorlist" >
+                            <li>Este campo é obrigatório</li>
+                        </ul>
+                    </div>
+                    <div class="pure-control-group" >
+                        <label for="email" >E-mail</label>
+                        <input id="email" type="text" />
+                    </div>
+                    <div class="pure-control-group" >
+                        <label for="Mensagem/Dúvida" >Mensagem/Dúvida</label>
+                        <textarea cols="40" rows="4"></textarea>        
+                    </div>
+
+                    <div class="pure-controls">
+                        <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+
+                    </div>
+
+                </fieldset>
+            </form>
+
         </div>
     </div>
    
