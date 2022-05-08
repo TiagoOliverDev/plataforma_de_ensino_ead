@@ -8,3 +8,7 @@ class ContactCourse(forms.Form):
     email = forms.EmailField(label='Email')
     message = forms.CharField(label='Mensagem/Dúvida', widget=forms.Textarea)
     
+
+
+
+

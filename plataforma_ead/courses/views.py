@@ -23,14 +23,18 @@ def index(request):
 
 def details(request, id):
     course = get_object_or_404(Course, pk=id)#.get retorna somente um de acordo com seu id (pk)
+    context = {}
     if request.method == 'POST':
         form = ContactCourse(request.POST)
+        if form.is_valid():
+            context['is_valid'] = True
+            print(form.cleaned_data) #dicionário com todos os dados validados
+            form = ContactCourse() #deixando form limpo de novo
+           
     else:
         form = ContactCourse()
-    context = {
-        'course': course,
-        'form': form
-    }
+    context['form'] = form
+    context['course'] = course
     template_name = 'courses/details.html'
     return render(request, template_name, context)
 
