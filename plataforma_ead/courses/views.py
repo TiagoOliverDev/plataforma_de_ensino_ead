@@ -23,9 +23,13 @@ def index(request):
 
 def details(request, id):
     course = get_object_or_404(Course, pk=id)#.get retorna somente um de acordo com seu id (pk)
+    if request.method == 'POST':
+        form = ContactCourse(request.POST)
+    else:
+        form = ContactCourse()
     context = {
-        'course': course
-        #'form': ContactCourse()
+        'course': course,
+        'form': form
     }
     template_name = 'courses/details.html'
     return render(request, template_name, context)
