@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import os
+from pickle import TRUE
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -127,4 +128,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/midia/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'midia')
+
+#E-mails
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'   #remetente
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'paulloholiveira77@gmail.com'  #destinatário
+
+
+
+
+
+
 

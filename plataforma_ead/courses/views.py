@@ -28,9 +28,9 @@ def details(request, id):
         form = ContactCourse(request.POST)
         if form.is_valid():
             context['is_valid'] = True
+            form.send_mail(course) #chamando função send_mail criada lá no forms.py
             print(form.cleaned_data) #dicionário com todos os dados validados
-            form = ContactCourse() #deixando form limpo de novo
-           
+            form = ContactCourse() #deixando form limpo de novo  
     else:
         form = ContactCourse()
     context['form'] = form
