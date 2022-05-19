@@ -50,7 +50,7 @@
             {% endif %}
             <form action="#contato" class="pure-form pure-form-aligned" method="post">
                 {% csrf_token %}
-                <fieldset>
+                <fieldset>      
                     {% for field in form %}
                     <div class="pure-control-group" >
                         {{ field.label_tag }}

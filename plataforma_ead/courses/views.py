@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404, render
 
 #from plataforma_ead import courses
 from .models import Course
+
 from .forms import ContactCourse
 # Create your views here.
 

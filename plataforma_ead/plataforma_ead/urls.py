@@ -25,6 +25,8 @@ urlpatterns = [
     #path('', include('plataforma_ead.urls')),
     path('', include('core.urls')),
     path('', include('courses.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 

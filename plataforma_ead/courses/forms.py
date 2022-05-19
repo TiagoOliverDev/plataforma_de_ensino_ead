@@ -12,7 +12,6 @@ class ContactCourse(forms.Form):
     email = forms.EmailField(label='Email')
     message = forms.CharField(label='Mensagem/Dúvida', widget=forms.Textarea)
     
-
     def send_mail(self, course):
         subject = '[%s] Contato' % course
         message = 'Nome: %(name)s;E-mail: %(email)s;%(message)s'
@@ -23,6 +22,3 @@ class ContactCourse(forms.Form):
         }
         message = message % context
         send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])
-
-
-
