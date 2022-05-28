@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'core',
     'courses',
     'accounts',
+    'allauth', #para login
+    'allauth.account', #para login
+    'allauth.socialaccount', #para login
+     
+
 ]
 
 MIDDLEWARE = [
@@ -132,7 +137,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'midia')
 
 #O comando abaixo serve para deixar o crispy_forms estilizado com bootstrap4
 CRISPY_TEMPLATE_PACK = 'bootstrap4' #or bootstrap3
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/' #quando logar corretamente no sistema redireciona para a home do projeto
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
 
@@ -148,7 +153,6 @@ EMAIL_HOST_PASSWORD = 'senha'
 EMAIL_PORT = 587
 
 CONTACT_EMAIL = 'paulloholiveira77@gmail.com'  #destinatário
-
 
 
 
